@@ -7,15 +7,15 @@ class graph
 	int E;
 	//边数
 	vector<vector<double>> g;
-	//创建邻接表数组
-public:
+	//创建邻接矩阵
+public:	
 	void initgraph(int V);
 	void fillgraph(vector<vector<double>> g, vector<vector<int>> new_g);
 	int hasedge(int from,int to);
 	int VG();
 	int EG();
 };
-//初始化邻接表
+//初始化邻接矩阵
 void graph::initgraph(int V)
 {
 	this->V = V;
