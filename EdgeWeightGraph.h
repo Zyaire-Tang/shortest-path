@@ -8,19 +8,25 @@ using std::vector;
 class Graph
 {
 private:
-	//顶点总数
-	int V;
-	//边的总数
-	int E;
-	//用链表实现邻接数组
-	vector<Edge*> adj;
+	
+	int V;					//顶点总数
+	
+	int E;					//边的总数
 
 public:
+	
+	vector<Edge*> adj;		//用链表实现邻接数组
+
 	Graph(int V);
+
 	int showV();
+
 	int showE();
+
 	void addEdge(Edge e);
+
 	std::string showEdge(int v);
+
 	std::string showAllEdge();
 };
 #endif // !EDGEWEIGHTGRAPH_H

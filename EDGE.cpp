@@ -1,11 +1,12 @@
 #include"EDGE.h"
 
-//初始化
-Edge::Edge(int v, int w, double weight)
+
+Edge::Edge(int v, int w, double weight)		//初始化
 {
 	this->v = v;
 	this->w = w;
 	this->weight = weight;
+	this->next = NULL;
 }
 
 double Edge::showWeight()
@@ -13,8 +14,8 @@ double Edge::showWeight()
 	return weight;
 }
 
-//获取顶点
-int Edge::either()
+
+int Edge::either()							//获取顶点
 {
 	return v;
 }
@@ -27,8 +28,8 @@ int Edge::other(int vertex)
 		return v;
 }
 
-//与其他边权重比较
-int Edge::compareTo(Edge that)
+
+int Edge::compareTo(Edge that)				//与其他边权重比较
 {
 	if (this->showWeight() < that.showWeight())
 		return -1;
@@ -38,8 +39,8 @@ int Edge::compareTo(Edge that)
 		return 0;
 }
 
-//打印边
-std::string Edge::toString()
+
+std::string Edge::toString()				//打印边
 {
 	std::string a;
 	a = v + ' ' + w + ' ' + weight;

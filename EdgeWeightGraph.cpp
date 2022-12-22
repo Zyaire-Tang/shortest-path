@@ -1,8 +1,7 @@
 #include"EdgeWeightGraph.h"
-using std::vector;
 
-//初始化
-Graph::Graph(int V)
+
+Graph::Graph(int V)				//初始化
 {
 	this->V = V;
 	this->E = 0;
@@ -10,8 +9,8 @@ Graph::Graph(int V)
 		adj[i] = NULL;
 }
 
-//获取顶点总数和边的总数
-int Graph::showE()
+
+int Graph::showE()				//获取顶点总数和边的总数
 {
 	return E;
 }
@@ -21,8 +20,8 @@ int Graph::showV()
 	return V;
 }
 
-//在图中加一条边
-void Graph::addEdge(Edge e)
+
+void Graph::addEdge(Edge e)		//在图中加一条边
 {
 	int v = e.either(), w = e.other(v);
 	Edge* temp1 = adj[v];
@@ -36,8 +35,8 @@ void Graph::addEdge(Edge e)
 	E++;
 }
 
-//读取与顶点v相邻的所有顶点
-std::string Graph::showEdge(int v)
+
+std::string Graph::showEdge(int v)	//读取与顶点v相邻的所有顶点
 {
 	std::string a;
 	a = "与顶点 " + v;
@@ -52,8 +51,8 @@ std::string Graph::showEdge(int v)
 	return a;
 }
 
-//读取图
-std::string Graph::showAllEdge()
+
+std::string Graph::showAllEdge()	//读取图
 {
 	std::string a;
 	for (int i = 0; i < V; i++)
