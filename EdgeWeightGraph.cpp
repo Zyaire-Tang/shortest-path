@@ -1,10 +1,10 @@
 #include"EdgeWeightGraph.h"
 
 
-Graph::Graph(int V)				//初始化
+Graph::Graph(int V,int E)				//初始化
 {
 	this->V = V;
-	this->E = 0;
+	this->E = E;
 	for (int i = 0; i != V; i++)
 		adj[i] = NULL;
 }

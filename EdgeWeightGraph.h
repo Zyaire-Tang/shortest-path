@@ -17,7 +17,7 @@ public:
 	
 	vector<Edge*> adj;		//用链表实现邻接数组
 
-	Graph(int V);
+	Graph(int V,int E);
 
 	int showV();
 

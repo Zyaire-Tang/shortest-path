@@ -130,6 +130,7 @@
     <ClCompile Include="BreathFirstSearch.cpp" />
     <ClCompile Include="EDGE.cpp" />
     <ClCompile Include="EdgeWeightGraph.cpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BreathFirstSearch.h" />
