@@ -15,15 +15,24 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="graph.cpp">
+    <ClCompile Include="EdgeWeightGraph.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="BreathFirstSearch.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="EDGE.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ShortestPath.h">
+    <ClInclude Include="EDGE.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="EdgeWeightGraph.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="BreathFirstSearch.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

@@ -128,10 +128,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BreathFirstSearch.cpp" />
-    <ClCompile Include="graph.cpp" />
+    <ClCompile Include="EDGE.cpp" />
+    <ClCompile Include="EdgeWeightGraph.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ShortestPath.h" />
+    <ClInclude Include="BreathFirstSearch.h" />
+    <ClInclude Include="EDGE.h" />
+    <ClInclude Include="EdgeWeightGraph.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
