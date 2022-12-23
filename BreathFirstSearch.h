@@ -9,7 +9,7 @@ private:
 
 	vector<int> marked;         //标记已经遍历过的顶点
 	
-	vector<int> sumWeight;      //记录到某一顶点的最短路
+	vector<double> sumWeight;      //记录到某一顶点的最短路
 
 	vector<int> edgeTo;			//记录该顶点上一顶点
 	

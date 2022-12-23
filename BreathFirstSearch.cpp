@@ -78,7 +78,7 @@ std::string BreathFirstSearch::ShortestPath(Graph G,int s)		//记录最短路程及最短
 
 		a += " 到顶点 " + i;
 
-		a += " 的最短路程为: " + sumWeight[i];
+		a += " 的最短路程为: " + std::to_string(sumWeight[i]);
 
 		a += " 路径为: " + s;
 
