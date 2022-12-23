@@ -5,14 +5,14 @@
 BreathFirstSearch::BreathFirstSearch(Graph G, int s)	//≥ı ºªØ
 {
 
-	for (int i = 0; i != G.showV(); i++)
-		marked[i] = 0;
+	for (int i = 0; i <= G.showV(); i++)
+		this->marked.push_back(0);
 
-	for (int i = 0; i != G.showV(); i++)
-		sumWeight[i] = 0;
+	for (int i = 0; i <= G.showV(); i++)
+		this->sumWeight.push_back(0);
 
-	for (int i = 0; i != G.showV(); i++)
-		edgeTo[i] = -1;
+	for (int i = 0; i <= G.showV(); i++)
+		this->edgeTo.push_back(-1);
 
 	this->s = s;
 

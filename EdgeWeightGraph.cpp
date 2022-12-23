@@ -9,7 +9,7 @@ Graph::Graph(int V,int E)				//初始化
 
 	for (int i = 0; i != V; i++)
 
-		adj[i] = NULL;
+		this->adj.push_back(NULL);
 }
 
 
@@ -43,8 +43,6 @@ void Graph::addEdge(Edge e)		//在图中加一条边
 	adj[w] = &e2;
 
 	e2.next = temp2;
-
-	E++;
 }
 
 
