@@ -1,6 +1,8 @@
 #include"EDGE.h"
 
 
+Edge::Edge() {};
+
 Edge::Edge(int v, int w, double weight)		//³õÊ¼»¯
 {
 	this->v = v;

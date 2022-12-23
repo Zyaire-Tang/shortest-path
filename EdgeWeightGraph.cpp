@@ -8,8 +8,9 @@ Graph::Graph(int V,int E)				//初始化
 	this->E = E;
 
 	for (int i = 0; i != V; i++)
-
-		this->adj.push_back(NULL);
+	{
+		this->adj.push_back(0);
+	}
 }
 
 
@@ -32,17 +33,29 @@ void Graph::addEdge(Edge e)		//在图中加一条边
 
 	Edge* temp2 = adj[w];
 
-	Edge e1 = Edge(v, w, e.showWeight());
+	Edge* e1 = new Edge;
 
-	Edge e2 = Edge(v, w, e.showWeight());
+	Edge* e2 = new Edge;
 
-	adj[v] = &e1;
+	e1->v = v;
 
-	e1.next = temp1;
+	e1->w = w;
 
-	adj[w] = &e2;
+	e1->weight = e.showWeight();
 
-	e2.next = temp2;
+	e1->next = temp1;
+
+	adj[v] = e1;
+
+	e2->v = v;
+
+	e2->w = w;
+
+	e2->weight = e.showWeight();
+
+	e2->next = temp2;
+
+	adj[w] = e2;
 }
 
 

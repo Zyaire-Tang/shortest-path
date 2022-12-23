@@ -29,35 +29,35 @@ void BreathFirstSearch::bfs(Graph G, int s)				//广度优先搜索的实现
 
 	while (!quene.empty())		//对相邻顶点进行遍历并且标记
 	{
-		int v = *quene.begin();
+		int vv = *quene.begin();
 
 		quene.erase(quene.begin());
 
 		Edge* p = NULL;
 
-		p = G.adj[v];
+		p = G.adj[vv];
 
-		int w = p->other(v);
+		int ww = p->other(vv);
 
 		while (p)
 		{
-			if (!marked[w])		//将未被标记的顶点进行标记,记录路程并放入队列
+			if (!marked[ww])		//将未被标记的顶点进行标记,记录路程并放入队列
 			{
-				sumWeight[w] = sumWeight[v] + p->showWeight();
+				sumWeight[ww] = sumWeight[vv] + p->showWeight();
 
-				marked[w] = 1;
+				marked[ww] = 1;
 
-				edgeTo[w] = v;
+				edgeTo[ww] = vv;
 
-				quene.push_back(w);
+				quene.push_back(ww);
 			}
-			else if(marked[w])		//对相邻已被标记的顶点进行最短路更新
+			else if(marked[ww])		//对相邻已被标记的顶点进行最短路更新
 			{
-				if (sumWeight[v] + p->showWeight() < sumWeight[w])
+				if (sumWeight[vv] + p->showWeight() < sumWeight[ww])
 				{
-					sumWeight[w] = sumWeight[v] + p->showWeight();
+					sumWeight[ww] = sumWeight[vv] + p->showWeight();
 
-					edgeTo[w] = v;
+					edgeTo[ww] = vv;
 				}
 			}
 			p = p->next;
@@ -65,30 +65,19 @@ void BreathFirstSearch::bfs(Graph G, int s)				//广度优先搜索的实现
 	}
 }
 
-std::string BreathFirstSearch::ShortestPath(Graph G,int s)		//记录最短路程及最短路径
+std::string BreathFirstSearch::ShortestPath(Graph G,int s,int t)		//记录最短路程及最短路径
 {
 	std::string a;
-	for (int i = 0,j = 0; i < G.showV();i++)
-	{
-		if (i == s)
 
-			continue;
+	a = "shorst path: ";
 
-		a = "顶点 " + s;
+		std::string b = std::to_string(t);
 
-		a += " 到顶点 " + i;
-
-		a += " 的最短路程为: " + std::to_string(sumWeight[i]);
-
-		a += " 路径为: " + s;
-
-		std::string b = 0;
-
-		j = i;
+		int j = t;
 
 		while (j != s)
 		{
-			b += edgeTo[j] + "	";
+			b += ' ' + std::to_string(edgeTo[j]);
 
 			j = edgeTo[j];
 		}
@@ -97,7 +86,9 @@ std::string BreathFirstSearch::ShortestPath(Graph G,int s)		//记录最短路程及最短
 		a += b;
 
 		a += '\n';
-	}
+
+		a += "shortest weight: " + std::to_string(sumWeight[t]);
+	
 
 	return a;
 }

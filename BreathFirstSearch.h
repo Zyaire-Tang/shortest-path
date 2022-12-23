@@ -21,6 +21,6 @@ public:
 
 	void bfs(Graph G, int s);
 
-	std::string ShortestPath(Graph G,int s);
+	std::string ShortestPath(Graph G,int s,int t);
 };
 #endif // !BREATHFIRSTSEARCH_H
