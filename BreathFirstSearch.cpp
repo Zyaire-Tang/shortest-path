@@ -37,10 +37,10 @@ void BreathFirstSearch::bfs(Graph G, int s)				//广度优先搜索的实现
 
 		p = G.adj[vv];
 
-		int ww = p->other(vv);
-
 		while (p)
 		{
+			int ww = p->other(vv);
+
 			if (!marked[ww])		//将未被标记的顶点进行标记,记录路程并放入队列
 			{
 				sumWeight[ww] = sumWeight[vv] + p->showWeight();
