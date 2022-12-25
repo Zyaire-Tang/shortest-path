@@ -118,5 +118,13 @@ int main()
 
 	cout << bfs.ShortestPath(graph, ss,tt) << endl;
 
+	cout << "ÊäÈë#ÍË³ö³ÌĞò" << endl;
+
+	char end = 0;
+
+	cin >> end;
+
+	if(end == '#')
+
 	return 0;
 }
