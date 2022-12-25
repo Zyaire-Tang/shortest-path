@@ -15,18 +15,18 @@ private:
 
 public:
 	
-	vector<Edge*> adj;		//用链表实现邻接数组
+	vector<Edge*> adj;				//用链表实现邻接数组
 
-	Graph(int V,int E);
+	Graph(int V,int E);				//初始化
 
-	int showV();
+	int showV();					//返回顶点数
 
-	int showE();
+	int showE();					//返回边数
 
-	void addEdge(Edge e);
+	void addEdge(Edge e);			//在图中添加一条边
 
-	std::string showEdge(int v);
+	std::string showEdge(int v);	//打印与顶点v相关联的所有边
 
-	std::string showAllEdge();
+	std::string showAllEdge();		//打印所有边
 };
 #endif // !EDGEWEIGHTGRAPH_H

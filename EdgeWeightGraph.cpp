@@ -63,15 +63,11 @@ std::string Graph::showEdge(int v)	//读取与顶点v相邻的所有顶点
 {
 	std::string a;
 
-	a = "与顶点 " + v;
-
-	a += " 相邻的所有顶点为: ";
-
 	Edge* ptr = adj[v];
 
 	while (ptr)
 	{
-		a += ptr->other(v) + " ";
+		a += std::to_string(ptr->other(v)) + " ";
 
 		ptr = ptr->next;
 	}

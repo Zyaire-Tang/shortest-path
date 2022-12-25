@@ -16,16 +16,16 @@ public:
 
 	Edge();
 
-	Edge(int v, int w, double weight);
+	Edge(int v, int w, double weight);			//初始化
 
-	double showWeight();
+	double showWeight();						//返回权重
 
-	int either();
+	int either();								//获取其中一个顶点
 
-	int other(int vertex);
+	int other(int vertex);						//获取另外一个顶点
 
-	int compareTo(Edge that);
+	int compareTo(Edge that);					//	两条边权重的比较
 
-	std::string toString();
+	std::string toString();						//打印这条边的信息
 };
 #endif// !EDGE_H

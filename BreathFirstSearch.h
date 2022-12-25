@@ -17,10 +17,10 @@ private:
 
 public:
 
-	BreathFirstSearch(Graph G,int s);
+	BreathFirstSearch(Graph G,int s);				//初始化并且求出最短路径
 
-	void bfs(Graph G, int s);
+	void bfs(Graph G, int s);						//广度优先搜索
 
-	std::string ShortestPath(Graph G,int s,int t);
+	std::string ShortestPath(Graph G,int s,int t);	//打印最小权重和最短路
 };
 #endif // !BREATHFIRSTSEARCH_H
